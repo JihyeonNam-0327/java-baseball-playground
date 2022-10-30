@@ -28,19 +28,20 @@ public class Calculator {
     }
 
     public static int calculate(String operator, int firstNumber, int secondNumber) {
-        switch (operator) {
-            case "+":
-                return plus(firstNumber, secondNumber);
-            case "-":
-                return minus(firstNumber, secondNumber);
-            case "*":
-                return multiply(firstNumber, secondNumber);
-            case "/":
-                return devide(firstNumber, secondNumber);
-            default:
-                System.out.println("잘못된 연산자입니다.");
-                return -1;
-        }
+        if(operator.equals("+"))
+            return plus(firstNumber, secondNumber);
+
+        if(operator.equals("-"))
+            return minus(firstNumber, secondNumber);
+
+        if(operator.equals("*"))
+            return multiply(firstNumber, secondNumber);
+
+        if(operator.equals("/"))
+            return devide(firstNumber, secondNumber);
+
+        System.out.println("잘못된 연산자 기호입니다.");
+        return -1;
     }
 
     public static void setNumbers(List<Integer> numbers, String s) {
